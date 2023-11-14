@@ -23,5 +23,18 @@ function createRandomId (min, max) {
   };
 }
 
+const getRandomArrayElement = (items) => items[createRandomNumber(0, items.length - 1)];
+
+const createIdGenerator = () => {
+  let lastGenerateId = 0;
+
+  return () => {
+    lastGenerateId += 1;
+    return lastGenerateId;
+  };
+};
+
 export{createRandomId};
 export{createRandomNumber};
+export{getRandomArrayElement};
+export{createIdGenerator};
