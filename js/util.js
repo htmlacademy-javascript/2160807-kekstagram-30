@@ -1,4 +1,4 @@
-// создание слайного ID
+// создание случайного ID
 function createRandomNumber (min, max) {
   const lower = Math.ceil(Math.min(Math.abs(min), Math.abs(max)));
   const upper = Math.floor(Math.max(Math.abs(min), Math.abs(max)));
