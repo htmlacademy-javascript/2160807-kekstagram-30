@@ -1,4 +1,4 @@
-// создание слайного ID
+// создание случайного ID
 function createRandomNumber (min, max) {
   const lower = Math.ceil(Math.min(Math.abs(min), Math.abs(max)));
   const upper = Math.floor(Math.max(Math.abs(min), Math.abs(max)));
@@ -23,5 +23,18 @@ function createRandomId (min, max) {
   };
 }
 
+const getRandomArrayElement = (items) => items[createRandomNumber(0, items.length - 1)];
+
+const createIdGenerator = () => {
+  let lastGenerateId = 0;
+
+  return () => {
+    lastGenerateId += 1;
+    return lastGenerateId;
+  };
+};
+
 export{createRandomId};
 export{createRandomNumber};
+export{getRandomArrayElement};
+export{createIdGenerator};
